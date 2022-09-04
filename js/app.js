@@ -1,29 +1,29 @@
-const spinner = document.getElementById("spinner");
 
 // All Catagories API
 
 const loadAllCategories = () => {
-    const url = 'https://openapi.programming-hero.com/api/news/categories';
-    fetch(url)
-        .then((res) => res.json())
-        .then((data) => displayAllCategories(data.data.news_category))
+  const url = 'https://openapi.programming-hero.com/api/news/categories';
+  fetch(url)
+  .then((res) => res.json())
+  .then((data) => displayAllCategories(data.data.news_category))
         .catch((err)=>console.log(err));
-};
-
-const displayAllCategories = (categories) => {
-    // console.log(categories);
-
-    for (const categorie of categories) {
-        const allCategories = document.getElementById("categories");
-        const categoriesUl = document.createElement("div");
+      };
+      
+      const displayAllCategories = (categories) => {
+        // console.log(categories);
+        
+        for (const categorie of categories) {
+          const allCategories = document.getElementById("categories");
+          const categoriesUl = document.createElement("div");
         categoriesUl.innerHTML = `
-            <button onclick="AllCategories('${categorie.category_id}')" class="h-button">${categorie.category_name}</button>
+        <button onclick="AllCategories('${categorie.category_id}')" class="h-button">${categorie.category_name}</button>
         `;
         allCategories.appendChild(categoriesUl);
-    }
-};
-// all Categories data by catch by id
-
+      }
+    };
+    // all Categories data by catch by id
+    
+const spinner = document.getElementById("spinner");
 const AllCategories = (idCategories) => {
     // console.log("show id", idCategories);
     
@@ -102,7 +102,7 @@ const displayAllNews = (catagoryNews) => {
                       </div>
 
                       <div >
-                      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                       <i class="fa-solid fa-right-long"></i>
                       </button>
 
@@ -110,7 +110,7 @@ const displayAllNews = (catagoryNews) => {
                       <div class="modal-dialog">
                         <div class="modal-content">
                           <div class="modal-header">
-                            <h5 class="text-danger" id="exampleModalLabel">${news.title ? news.title :"Title Not Found" }</h5>
+                            <h5 class="text-primary" id="exampleModalLabel">${news.title ? news.title :"Title Not Found" }</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
                           <div class="modal-body d-flex flex-column">

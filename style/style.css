@@ -1,7 +1,7 @@
 .pepole
 {
     color: #fff;
-    background-color: red;
+    background-color: blue;
     border-radius: 5px;
     padding: 2px 5px;
 }
@@ -19,7 +19,7 @@
     letter-spacing: 1px;
     border-radius: 5px;
     color: #fff;
-    background-color: red;
+    background-color: blue;
 }
 .h-button:hover
 {
@@ -33,7 +33,7 @@
 }
 
 .array{
-    background: red;
+    background: blue;
     padding: 10px 20px;
     color: #fff;
     cursor: pointer;
@@ -41,7 +41,7 @@
 
 .card-title
 {
-    color: red;
+    color: blue;
 }
 
 /*
